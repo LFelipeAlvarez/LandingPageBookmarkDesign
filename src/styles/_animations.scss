@@ -1,0 +1,22 @@
+
+
+@keyframes section {
+
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+
+}
+
+.section--visible,
+.hero__img--visible {
+    animation-name           : section;
+    animation-duration       : .6s;
+    animation-timing-function: ease;
+}
+

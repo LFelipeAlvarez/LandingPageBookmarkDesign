@@ -1,0 +1,41 @@
+@use 'variables'as *;
+
+.buttons {
+    display        : flex;
+    justify-content: space-between;
+    max-width      : 320px;
+    margin-left    : auto;
+    margin-right   : auto;
+}
+
+.button {
+    outline         : none;
+    cursor          : pointer;
+    background-color: $soft-blue;
+    color           : #fff;
+    border          : none;
+    border-radius   : 5px;
+    padding         : .8rem;
+    font-size       : .9rem;
+    font-weight     : 600;
+    box-shadow      : 0px 3px 3px 0px rgba(145, 148, 161, 0.58);
+
+    &--white {
+        background-color: rgba($grayish-blue, .1);
+        color           : $very-dark-blue;
+    }
+
+    &--card {
+        padding: 1.1rem 2.5rem;
+    }
+
+    &--questions {
+        margin-top: 2.8rem;
+        padding   : 1rem 1.5rem;
+    }
+
+    &--red {
+        background-color: $soft-red;
+        font-size: .8rem;
+    }
+}

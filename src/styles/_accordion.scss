@@ -1,0 +1,71 @@
+@use 'variables'as*;
+
+.accordion-container {
+    margin-top: 2rem;
+
+}
+
+.accordion {
+    text-align   : left;
+    margin-top   : 1rem;
+    border-bottom: 1px solid rgba($grayish-blue, .3);
+
+    &__title {
+        margin    : 0;
+        color     : $very-dark-blue;
+        font-size : .89rem;
+        padding   : 1rem 0;
+        position  : relative;
+        cursor    : pointer;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: #fa5757;
+            ;
+        }
+
+        &::before {
+            content : '';
+            display : block;
+            position: absolute;
+            width   : .8rem;
+            height  : .8rem;
+            right   : 0;
+
+            background-image   : url('../assets/images/icon-arrow.svg');
+            background-position: right;
+            background-repeat  : no-repeat;
+            background-size    : contain;
+
+            transition: transform .3s ease-in-out, background-image .2s ease-in-out;
+        }
+    }
+
+
+    &__text {
+        margin    : 0;
+        max-height: 0;
+        color     : $grayish-blue;
+
+        overflow  : hidden;
+        transition: max-height .3s ease-in-out, padding .3s ease-in-out;
+
+    }
+
+    &--active {
+
+        .accordion__title {
+
+            &::before {
+                transform       : rotate(540deg);
+                background-image: url('../assets/images/icon-arrow2.svg');
+            }
+        }
+
+        .accordion__text {
+            max-height: 300px;
+            padding   : 1.3rem 0 2.1rem 0;
+
+        }
+    }
+}

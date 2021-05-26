@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Rubik400;
+    src        : url('../assets/fonts/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: Rubik500;
+    src        : url('../assets/fonts/Rubik-Medium.ttf');
+}
+
+html {
+    overflow-x     : hidden;
+    scroll-behavior: smooth;
+    font-size      : 18px;
+    height         : -webkit-fill-available;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    margin          : 0;
+    background-color: #fff;
+    height         : -webkit-fill-available;
+    overflow-x: hidden;
+
+    user-select: none;
+    font-family: Rubik400;
+    display    : grid;
+    grid-template-areas:
+        "header"
+        "hero1"
+        "content1"
+        "content2"
+        "content3"
+        "hero2"
+        "content4"
+        "content5"
+        "content6"
+        "content7"
+        "footer";
+    text-align: center;
+
+}
+
+nav {
+    margin: 0;
+}
+
+ul {
+    margin      : 0;
+    padding-left: 0;
+    list-style  : none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.social-icon {
+    cursor: pointer;
+    margin: 0 1rem;
+
+    path {
+        transition: .3s ease-in-out;
+    }
+
+    &:hover>path {
+        fill: #fa5757;
+    }
+
+}

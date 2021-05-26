@@ -1,0 +1,142 @@
+@use 'variables'as *;
+
+.section,
+.hero {
+    padding-left : var(--padding-sizes);
+    padding-right: var(--padding-sizes);
+}
+
+.hero {
+    margin-top: 4rem;
+}
+
+.section {
+    padding-top : $header-size + 3.5rem;
+
+    &__title {
+        color         : $very-dark-blue;
+        font-size     : 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        color      : $grayish-blue;
+        line-height: 1.6rem;
+        font-weight: 600;
+    }
+
+
+    &--1 {
+        grid-area: content1;
+
+    }
+
+    &--2 {
+        grid-area: content2;
+    }
+
+    &--3 {
+        grid-area: content3;
+    }
+
+    &--4 {
+        grid-area: content4;
+    }
+
+    &--5 {
+        grid-area: content5;
+    }
+
+    &--6 {
+        grid-area: content6;
+    }
+
+    &--7 {
+        grid-area  : content7;
+
+    }
+
+    &--8 {
+        grid-area: content8;
+    }
+
+    &--9 {
+        grid-area: content9;
+    }
+
+    &--invisible {
+        display: none;
+    }
+}
+
+.hero {
+    position    : relative;
+    max-width   : 700px;
+    margin-left : auto;
+    margin-right: auto;
+
+    &::before {
+        --height: calc(100% - 30px);
+        --radius: calc(var(--height) + 1000px);
+
+        content         : '';
+        display         : block;
+        position        : absolute;
+        width           : calc(100% - (2rem * 2));
+        height          : var(--height);
+        max-height      : 380px;
+        background-color: $soft-blue;
+        border-radius   : var(--radius) 0 0 var(--radius);
+        bottom          : -8%;
+        right           : -15%;
+        box-shadow      :
+            300px 0px 0px 0px $soft-blue,
+            600px 0px 0px 0px $soft-blue,
+            900px 0px 0px 0px $soft-blue,
+            1200px 0px 0px 0px $soft-blue,
+            1500px 0px 0px 0px $soft-blue,
+            1800px 0px 0px 0px $soft-blue;
+        z-index: -1;
+    }
+
+    &--1 {
+        grid-area: hero1;
+
+    }
+
+    &--2 {
+        grid-area: hero2;
+
+        &::before {
+            --height     : 100%;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            box-shadow   :
+                -200px 0 0 0 $soft-blue,
+                -400px 0 0 0 $soft-blue,
+                -600px 0 0 0 $soft-blue,
+                -800px 0 0 0 $soft-blue,
+                -1000px 0 0 0 $soft-blue,
+                -1200px 0 0 0 $soft-blue,
+                -1400px 0 0 0 $soft-blue;
+
+            bottom: -20%;
+            left  : -1%;
+        }
+    }
+
+    &__img {
+        display: none;
+    }
+
+    &__img--visible {
+        display     : block;
+        margin-left : auto;
+        margin-right: auto;
+    }
+
+
+}
+
+.footer {
+    grid-area: footer;
+}
