@@ -213,13 +213,5 @@ form.addEventListener('submit', function (e) {
     e.target.submit();
   }
 });
-
-var changeSocialIcon = function changeSocialIcon(element, src) {}; // document.addEventListener('mous')
-
-
-document.querySelectorAll('.social-icon').forEach(function ($e) {// $e.addEventListener('mouseover', e => {
-  //     e.target.src = 'assets/images/icon-facebook2.svg';
-  // })
-});
 },{"./styles/main.scss":"LDUH"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.3bd6886b.js.map
+//# sourceMappingURL=/src.d4f23fbd.js.map

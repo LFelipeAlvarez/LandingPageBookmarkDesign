@@ -81,17 +81,8 @@ form.addEventListener('submit', e => {
 
 });
 
-const changeSocialIcon = (element, src) => {
 
-}
 
-// document.addEventListener('mous')
-
-document.querySelectorAll('.social-icon').forEach($e => {
-    // $e.addEventListener('mouseover', e => {
-    //     e.target.src = 'assets/images/icon-facebook2.svg';
-    // })
-});
 
 
 
