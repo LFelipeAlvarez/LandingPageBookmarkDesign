@@ -75,7 +75,7 @@ input.addEventListener('keyup', e => {
 form.addEventListener('submit', e => {
 
     e.preventDefault();
-    if (validateForm(e.target.email.value)) {
+    if (validateForm(e.target.contact.value)) {
         e.target.submit();
     }
 
